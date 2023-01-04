@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { RunningLogo } from "../components/background";
 
 export default function Home() {
   return (
@@ -6,7 +7,9 @@ export default function Home() {
       <Head>
         <title>Andi Saputro | Web Dev</title>
       </Head>
-      <main className=""></main>
+      <main className="">
+        <RunningLogo />
+      </main>
     </>
   );
 }
