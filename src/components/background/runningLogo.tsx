@@ -8,7 +8,7 @@ type Props = {};
 export const RunningLogo = (props: Props) => {
   return (
     <>
-      <div className="flex w-full gap-5 ">
+      <div className="flex w-full gap-5 animate-running">
         {SVGComps.map((SvgComp, idx) => {
           return (
             <div key={idx}>
