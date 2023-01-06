@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        running: {
-          "0%": { transform: "translateX(80rem)" },
-          "100%": { transform: "translateX(-50rem)" },
+        runningLogo: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-200%)" },
         },
       },
       animation: {
-        running: "running 5s linear infinite",
+        running: "runningLogo 30s linear infinite",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 };

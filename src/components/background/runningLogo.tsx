@@ -11,8 +11,8 @@ export const RunningLogo = (props: Props) => {
       <div className="flex w-full gap-5 animate-running">
         {SVGComps.map((SvgComp, idx) => {
           return (
-            <div key={idx}>
-              <SvgComp className="w-32 h-32 fill-slate-200 opacity-70 hover:opacity-100" />
+            <div key={idx} className="opacity-70 hover:opacity-100">
+              <SvgComp className="w-32 h-32 fill-slate-200" />
             </div>
           );
         })}
