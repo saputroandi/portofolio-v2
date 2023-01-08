@@ -6,3 +6,10 @@
   margin: 0;
   padding: 0;
 }
+
+.custom-delay {
+  animation-delay: -50s;
+}
+.custom-delay-extend {
+  animation-delay: -25s;
+}

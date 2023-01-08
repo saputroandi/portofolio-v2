@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Andi Saputro | Web Dev</title>
       </Head>
-      <main className="w-screen overflow-hidden">
+      <main className="">
         <RunningLogo />
       </main>
     </>

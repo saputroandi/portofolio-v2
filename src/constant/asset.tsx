@@ -1,11 +1,8 @@
-import SimpleIconsAmazonaws from "../../public/svg/SimpleIconsAmazonaws.svg";
 import SimpleIconsCss3 from "../../public/svg/SimpleIconsCss3.svg";
-import SimpleIconsDebian from "../../public/svg/SimpleIconsDebian.svg";
 import SimpleIconsDocker from "../../public/svg/SimpleIconsDocker.svg";
 import SimpleIconsEslint from "../../public/svg/SimpleIconsEslint.svg";
 import SimpleIconsExpress from "../../public/svg/SimpleIconsExpress.svg";
 import SimpleIconsJavascript from "../../public/svg/SimpleIconsJavascript.svg";
-import SimpleIconsJss from "../../public/svg/SimpleIconsJss.svg";
 import SimpleIconsLaravel from "../../public/svg/SimpleIconsLaravel.svg";
 import SimpleIconsLinux from "../../public/svg/SimpleIconsLinux.svg";
 import SimpleIconsMongodb from "../../public/svg/SimpleIconsMongodb.svg";
@@ -13,8 +10,6 @@ import SimpleIconsMysql from "../../public/svg/SimpleIconsMysql.svg";
 import SimpleIconsNestjs from "../../public/svg/SimpleIconsNestjs.svg";
 import SimpleIconsNextdotjs from "../../public/svg/SimpleIconsNextdotjs.svg";
 import SimpleIconsNodedotjs from "../../public/svg/SimpleIconsNodedotjs.svg";
-import SimpleIconsNodemon from "../../public/svg/SimpleIconsNodemon.svg";
-import SimpleIconsPostcss from "../../public/svg/SimpleIconsPostcss.svg";
 import SimpleIconsPostgresql from "../../public/svg/SimpleIconsPostgresql.svg";
 import SimpleIconsPrisma from "../../public/svg/SimpleIconsPrisma.svg";
 import SimpleIconsReact from "../../public/svg/SimpleIconsReact.svg";
@@ -23,14 +18,11 @@ import SimpleIconsTestinglibrary from "../../public/svg/SimpleIconsTestinglibrar
 import SimpleIconsTypescript from "../../public/svg/SimpleIconsTypescript.svg";
 
 export const SVGComp = [
-  SimpleIconsAmazonaws,
   SimpleIconsCss3,
-  SimpleIconsDebian,
   SimpleIconsDocker,
   SimpleIconsEslint,
   SimpleIconsExpress,
   SimpleIconsJavascript,
-  SimpleIconsJss,
   SimpleIconsLaravel,
   SimpleIconsLinux,
   SimpleIconsMongodb,
@@ -38,8 +30,6 @@ export const SVGComp = [
   SimpleIconsNestjs,
   SimpleIconsNextdotjs,
   SimpleIconsNodedotjs,
-  SimpleIconsNodemon,
-  SimpleIconsPostcss,
   SimpleIconsPostgresql,
   SimpleIconsPrisma,
   SimpleIconsReact,
