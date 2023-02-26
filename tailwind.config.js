@@ -27,6 +27,9 @@ module.exports = {
           "100%": { transform: "translateX(0%)" },
         },
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops) 90%)",
+      },
     },
   },
   plugins: [require("tailwindcss"), require("autoprefixer")],

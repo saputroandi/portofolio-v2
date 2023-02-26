@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { RunningLogo } from "../components/background";
+import MainLayouts from "../components/layouts";
+import SideBar from "../components/sideBar";
 
 export default function Home() {
   return (
@@ -7,9 +8,9 @@ export default function Home() {
       <Head>
         <title>Andi Saputro | Web Dev</title>
       </Head>
-      <main className="">
-        <RunningLogo />
-      </main>
+      <MainLayouts>
+        <SideBar />
+      </MainLayouts>
     </>
   );
 }
