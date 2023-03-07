@@ -25,7 +25,7 @@ const Navbar = (props: Props) => {
         <ul className="flex gap-1">
           {routes.map((route) => {
             return (
-              <Link href={route.link}>
+              <Link href={route.link} key={route.link}>
                 <li
                   onClick={() => props.setIsActive(route.link)}
                   className={clsx(
