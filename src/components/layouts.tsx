@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useWindowSize } from "../hooks";
 import Navbar from "./navbar";
 import { RunningLogo } from "./runningLogo";
@@ -11,18 +11,26 @@ type Props = {
 
 const MainLayouts = (props: Props) => {
   const windowSize = useWindowSize();
+  const [isActive, setIsActive] = useState("/");
+
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center">
+    <div className="relative flex h-screen w-screen">
       <RunningLogo />
       <div
         className={clsx(
-          "absolute z-10 flex gap-4",
-          windowSize.width < 640 ? "flex-col" : "flex-row"
+          "absolute top-0 left-0 z-10 h-full w-full overflow-auto"
         )}
       >
-        <SideBar />
-        <Navbar />
-        {props.children}
+        <div
+          className={clsx(
+            "my-4 mx-auto flex max-w-[95vw] gap-4 md:max-w-[80vw]",
+            windowSize.width < 640 ? "flex-col" : "flex-row"
+          )}
+        >
+          <SideBar isActive={isActive} setIsActive={setIsActive} />
+          <Navbar isActive={isActive} setIsActive={setIsActive} />
+          {props.children}
+        </div>
       </div>
     </div>
   );

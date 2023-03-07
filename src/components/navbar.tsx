@@ -1,8 +1,13 @@
 import clsx from "clsx";
-import React from "react";
+import Link from "next/link";
+import React, { Dispatch, SetStateAction } from "react";
+import { routes } from "../constant";
 import { useWindowSize } from "../hooks";
 
-type Props = {};
+type Props = {
+  isActive: string;
+  setIsActive: Dispatch<SetStateAction<string>>;
+};
 
 const Navbar = (props: Props) => {
   const windowSize = useWindowSize();
@@ -18,18 +23,23 @@ const Navbar = (props: Props) => {
       </div>
       <div className="">
         <ul className="flex gap-1">
-          <li className="flex p-2 text-sm hover:rounded-md hover:bg-fuchsia-400 hover:font-bold hover:text-black">
-            Home
-          </li>
-          <li className="flex p-2 text-sm hover:rounded-md hover:bg-fuchsia-400 hover:font-bold hover:text-black">
-            About
-          </li>
-          <li className="flex p-2 text-sm hover:rounded-md hover:bg-fuchsia-400 hover:font-bold hover:text-black">
-            Blog
-          </li>
-          <li className="flex p-2 text-sm hover:rounded-md hover:bg-fuchsia-400 hover:font-bold hover:text-black">
-            GuestBook
-          </li>
+          {routes.map((route) => {
+            return (
+              <Link href={route.link}>
+                <li
+                  onClick={() => props.setIsActive(route.link)}
+                  className={clsx(
+                    "flex rounded-md p-2 text-sm",
+                    props.isActive === route.link
+                      ? "bg-fuchsia-400 font-bold"
+                      : ""
+                  )}
+                >
+                  {route.caption}
+                </li>
+              </Link>
+            );
+          })}
         </ul>
       </div>
     </div>

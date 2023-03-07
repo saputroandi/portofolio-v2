@@ -1,15 +1,20 @@
 import clsx from "clsx";
-import React from "react";
+import Link from "next/link";
+import React, { Dispatch, SetStateAction } from "react";
+import { routes } from "../constant";
 import { useWindowSize } from "../hooks";
 
-type Props = {};
+type Props = {
+  isActive: string;
+  setIsActive: Dispatch<SetStateAction<string>>;
+};
 
 const SideBar = (props: Props) => {
   const windowSize = useWindowSize();
   return (
     <div
       className={clsx(
-        "w-64 rounded-xl bg-fuchsia-400/[0.4] p-10 text-gray-900 backdrop-blur-sm",
+        "max-h-[60vh] w-64 rounded-xl bg-fuchsia-400/[0.4] p-10 text-gray-900 backdrop-blur-sm",
         windowSize.width < 640 ? "hidden" : ""
       )}
     >
@@ -18,18 +23,23 @@ const SideBar = (props: Props) => {
       </div>
       <div className="">
         <ul className="flex w-28 flex-col gap-2">
-          <li className="flex-1 pt-2 pr-2 pb-2 hover:rounded-md hover:bg-fuchsia-400 hover:pl-2 hover:font-bold hover:text-black">
-            Home
-          </li>
-          <li className="flex-1 pt-2 pr-2 pb-2 hover:rounded-md hover:bg-fuchsia-400 hover:pl-2 hover:font-bold hover:text-black">
-            About
-          </li>
-          <li className="flex-1 pt-2 pr-2 pb-2 hover:rounded-md hover:bg-fuchsia-400 hover:pl-2 hover:font-bold hover:text-black">
-            Blog
-          </li>
-          <li className="flex-1 pt-2 pr-2 pb-2 hover:rounded-md hover:bg-fuchsia-400 hover:pl-2 hover:font-bold hover:text-black">
-            GuestBook
-          </li>
+          {routes.map((route) => {
+            return (
+              <Link href={route.link} key={route.link}>
+                <li
+                  onClick={() => props.setIsActive(route.link)}
+                  className={clsx(
+                    "flex-1 rounded-md pt-2 pr-2 pb-2",
+                    props.isActive === route.link
+                      ? "bg-fuchsia-400 pl-2 font-bold"
+                      : ""
+                  )}
+                >
+                  {route.caption}
+                </li>
+              </Link>
+            );
+          })}
         </ul>
       </div>
     </div>
