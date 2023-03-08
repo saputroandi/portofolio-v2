@@ -14,12 +14,12 @@ const SideBar = (props: Props) => {
   return (
     <div
       className={clsx(
-        "max-h-[60vh] w-64 rounded-xl bg-fuchsia-400/[0.4] p-10 text-gray-900 backdrop-blur-sm",
+        "h-[45vh] w-64 rounded-xl bg-fuchsia-400/[0.4] p-10 text-gray-900 backdrop-blur-sm",
         windowSize.width < 640 ? "hidden" : ""
       )}
     >
       <div className="mb-4">
-        <h3 className="text-3xl font-bold">Andi</h3>
+        <h3 className="text-3xl font-bold md:text-4xl">Andi</h3>
       </div>
       <div className="">
         <ul className="flex w-28 flex-col gap-2">

@@ -23,7 +23,7 @@ const MainLayouts = (props: Props) => {
       >
         <div
           className={clsx(
-            "my-4 mx-auto flex max-w-[95vw] gap-4 md:max-w-[80vw]",
+            "my-4 mx-auto flex max-w-[90vw] gap-4 md:mt-44 md:max-w-[70vw]",
             windowSize.width < 640 ? "flex-col" : "flex-row"
           )}
         >
