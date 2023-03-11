@@ -13,7 +13,7 @@ export const RunningLogo = (props: Props) => {
   }
   return (
     <>
-      <div className="mx-auto w-full overflow-hidden bg-gradient-radial from-transparent to-black mix-blend-overlay">
+      <div className="fixed top-0 bg-gradient-radial from-transparent to-black mix-blend-overlay">
         <div
           style={{ transform: "perspective(90rem) rotateX(45deg)" }}
           className="relative h-screen w-screen origin-top mix-blend-overlay"

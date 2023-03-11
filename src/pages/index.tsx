@@ -20,8 +20,8 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="overflow-hidden rounded-full border-4 border-gray-900">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center">
+          <div className="self-center overflow-hidden rounded-full border-4 border-gray-900">
             <Image
               alt="andi"
               src={"/img/photo_andi.s.jpeg"}

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import { useWindowSize } from "../hooks";
+import { useWindowPosition, useWindowSize } from "../hooks";
 import Navbar from "./navbar";
 import { RunningLogo } from "./runningLogo";
 import SideBar from "./sideBar";
@@ -12,25 +12,24 @@ type Props = {
 const MainLayouts = (props: Props) => {
   const windowSize = useWindowSize();
   const [isActive, setIsActive] = useState("/");
+  const windowPosition = useWindowPosition();
+
+  useEffect(() => {
+    console.log(windowPosition);
+  }, [windowPosition]);
 
   return (
-    <div className="relative flex h-screen w-screen">
+    <div className="relative">
       <RunningLogo />
       <div
         className={clsx(
-          "absolute top-0 left-0 z-10 h-full w-full overflow-auto"
+          "z-10 mx-auto my-4 flex h-full w-full max-w-[90vw] flex-col gap-4 md:mt-32 md:max-w-[70vw] md:flex-row",
+          windowSize.width < 640 ? "flex-col" : "flex-row"
         )}
       >
-        <div
-          className={clsx(
-            "my-4 mx-auto flex max-w-[90vw] gap-4 md:mt-44 md:max-w-[70vw]",
-            windowSize.width < 640 ? "flex-col" : "flex-row"
-          )}
-        >
-          <SideBar isActive={isActive} setIsActive={setIsActive} />
-          <Navbar isActive={isActive} setIsActive={setIsActive} />
-          {props.children}
-        </div>
+        <SideBar isActive={isActive} setIsActive={setIsActive} />
+        <Navbar isActive={isActive} setIsActive={setIsActive} />
+        {props.children}
       </div>
     </div>
   );

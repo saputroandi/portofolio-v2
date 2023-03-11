@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { routes } from "../constant";
 import { useWindowSize } from "../hooks";
 
@@ -14,12 +14,12 @@ const Navbar = (props: Props) => {
   return (
     <div
       className={clsx(
-        "flex w-[95vw] flex-col justify-between rounded-xl bg-fuchsia-400/[0.4] p-4 text-gray-900 backdrop-blur-sm",
+        "flex w-[90vw] flex-col justify-between rounded-xl bg-fuchsia-400/[0.4] p-4 text-gray-900 backdrop-blur-sm",
         windowSize.width > 640 ? "hidden" : ""
       )}
     >
       <div className="p-2">
-        <p>Andi</p>
+        <p className="text-3xl font-semibold">Andi</p>
       </div>
       <div className="">
         <ul className="flex gap-1">

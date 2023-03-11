@@ -5,41 +5,29 @@ type Props = {};
 function About({}: Props) {
   return (
     <div className="w-full rounded-xl bg-fuchsia-400/[0.4] p-10 text-gray-900 backdrop-blur-sm">
-      <div className="">
-        <p>
-          Halo, saya Andi Saputro, biasa dipanggil Andi. Saya adalah seorang
-          developer baik FrontEnd Developer atau BackEnd Developer.
+      <div className="mb-3">
+        <h3 className="text-2xl md:text-3xl">About Me</h3>
+      </div>
+      <div className="flex flex-col gap-2 leading-7">
+        <p className="text-lg">
+          Halo, saya Andi Saputro, biasa dipanggil Andi.
         </p>
-        <p>
-          Saya tertarik, dan menyukai pekerjaan yang menantang saya untuk
-          mempelajari sesuatu yang baru dan berkembang ke arah yang lebih baik.
-          Saya melakukan yang terbaik untuk tetap mengikuti perubahan sehingga
-          saya dapat menghadapi tantangan dengan kemampuan yang sesuai dengan
-          pekerjaan yang ada.
+        <p className="text-sm">
+          Saya adalah seorang <strong>App Developer</strong>. Saya tertarik dan
+          menyukai pekerjaan yang menantang saya untuk mempelajari sesuatu yang
+          baru dan berkembang ke arah yang lebih baik. Saya melakukan yang
+          terbaik untuk tetap mengikuti perubahan sehingga saya dapat menghadapi
+          tantangan dengan kemampuan yang sesuai.
         </p>
       </div>
-      <div className="">
-        <div className="">
-          <h3>Kemampuan</h3>
-        </div>
-        <div className="">
+      <div className="mt-2">
+        <div className="flex flex-col gap-2">
           <div className="">
-            <h4>Keterampilan & Ketertarikan</h4>
+            <p className="text-lg">
+              Library and Frameworks yang biasa saya gunakan
+            </p>
           </div>
-          <div className="">
-            <div className="">
-              <p>Back-End Development</p>
-            </div>
-            <div className="">
-              <p>Front-End Development</p>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <div className="">
-            <h4>Library and Frameworks</h4>
-          </div>
-          <div className="">
+          <div className="flex flex-col gap-1">
             <div className="">
               <p>Express Js</p>
             </div>
